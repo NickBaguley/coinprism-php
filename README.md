@@ -7,7 +7,8 @@ This project provides client library written in PHP for accessing coinprism.com 
 Use composer to download and install coinprism-php:
 
 ```
-composer require codestillery/coinprism-php
+php composer.phar config repositories.codestillery/coinprism-php vcs "https://github.com/Codestillery/coinprism-php"
+php composer.phar require codestillery/coinprism-php:dev-master
 ```
 
 ## Use
