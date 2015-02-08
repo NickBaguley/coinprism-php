@@ -1,0 +1,24 @@
+{
+	"name": "codestillery/coinprism-php",
+	"description": "PHP client for Coinprism colored coins API",
+	"keywords": ["colored coins", "coloredcoins", "blockchain", "bitcoin"],
+	"homepage": "https://github.com/codestillery/coinprism-php",
+	"type": "library",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Michał Rudnicki",
+			"email": "michal.rudnicki@codestillery.com"
+		}
+	],
+	"autoload": {
+		"psr-0": { "Codestillery\\Coinprism": "src/" }
+	},
+	"require": {
+		"php": ">=5.5.0",
+		"mockery/mockery": "~0.9"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "3.7.*"
+	}
+}
