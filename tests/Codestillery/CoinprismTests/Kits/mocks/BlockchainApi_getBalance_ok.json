@@ -1,81 +1,19 @@
-[
-  {
-    "hash": "eba760a81b177051b0520418b4e10596955adb98196c15367a2467ab66a19b5c",
-    "block_hash": "0000000000000000294fd5f69897880df65ad50c4a6aa1ee90a5f52d5dba7504",
-    "block_height": 313677,
-    "block_time": "2014-08-02T16:48:57.0000000",
-    "inputs": [
-      {
-        "transaction_hash": "eba760a81b177051b0520418b4e10596955adb98196c15367a2467ab66a19b5c",
-        "output_hash": "028df346bbb02469273ed286e0a1d40c965326e819f19371d04c99cf2650fddf",
-        "output_index": 0,
-        "value": 600,
-        "addresses": [
-          "1HHYPRCFijLkwQFsEPLv6iNEkYiwB4qsgs"
-        ],
-        "script_signature": "483045022100f43b7aaf8aa0fda50da3aac313c73718c2b3aa7cdcbe017a99a67a870abf5a29022033cac4d6602e72709fe58069e13391ba58f2f6e0e2c9bf446c01b1e9b045c5b401210279c1e47b36086d616523cd7c63eb592871b349236d1f0d0ffb9c94935539cfb9",
-        "asset_id": "AN51SPP6iZBHFJ3aux1jtn6MMMD13Gh3t7",
-        "asset_quantity": "2000"
-      },
-      {
-        "transaction_hash": "eba760a81b177051b0520418b4e10596955adb98196c15367a2467ab66a19b5c",
-        "output_hash": "028df346bbb02469273ed286e0a1d40c965326e819f19371d04c99cf2650fddf",
-        "output_index": 2,
-        "value": 1947000,
-        "addresses": [
-          "1HHYPRCFijLkwQFsEPLv6iNEkYiwB4qsgs"
-        ],
-        "script_signature": "48304502201768e35c93427603d4df69c4fb5e1358aa19b323879cbe972044ec0843819bc1022100cbe3156ae50c3e94d4e277b03f7d903f35d352e4f49ec64218a302fc423591de01210279c1e47b36086d616523cd7c63eb592871b349236d1f0d0ffb9c94935539cfb9",
-        "asset_id": null,
-        "asset_quantity": null
-      }
-    ],
-    "outputs": [
-      {
-        "transaction_hash": "eba760a81b177051b0520418b4e10596955adb98196c15367a2467ab66a19b5c",
-        "index": 0,
-        "value": 0,
-        "addresses": [],
-        "script": "6a0a4f41010002f403dc0b00",
-        "asset_id": null,
-        "asset_quantity": null
-      },
-      {
-        "transaction_hash": "eba760a81b177051b0520418b4e10596955adb98196c15367a2467ab66a19b5c",
-        "index": 1,
-        "value": 600,
-        "addresses": [
-          "1BXVXP82f7x9YWdWuCaCYwad8ZoYayyRYt"
-        ],
-        "script": "76a91473758c13a91699376abb8fe76931bdd9bdc04ee388ac",
-        "asset_id": "AN51SPP6iZBHFJ3aux1jtn6MMMD13Gh3t7",
-        "asset_quantity": "500"
-      },
-      {
-        "transaction_hash": "eba760a81b177051b0520418b4e10596955adb98196c15367a2467ab66a19b5c",
-        "index": 2,
-        "value": 600,
-        "addresses": [
-          "1HHYPRCFijLkwQFsEPLv6iNEkYiwB4qsgs"
-        ],
-        "script": "76a914b2a2de394ce286509c8e4c30dcd157df001cdf7388ac",
-        "asset_id": "AN51SPP6iZBHFJ3aux1jtn6MMMD13Gh3t7",
-        "asset_quantity": "1500"
-      },
-      {
-        "transaction_hash": "eba760a81b177051b0520418b4e10596955adb98196c15367a2467ab66a19b5c",
-        "index": 3,
-        "value": 1936400,
-        "addresses": [
-          "1HHYPRCFijLkwQFsEPLv6iNEkYiwB4qsgs"
-        ],
-        "script": "76a914b2a2de394ce286509c8e4c30dcd157df001cdf7388ac",
-        "asset_id": null,
-        "asset_quantity": null
-      }
-    ],
-    "amount": 1937600,
-    "fees": 10000,
-    "confirmations": 9831
-  }
-]
+{
+	"asset_address": "akMVNmYwN8bqqQknswpgPCoVCUAyiXyDxvG",
+	"bitcoin_address": "1BXVXP82f7x9YWdWuCaCYwad8ZoYayyRYt",
+	"issuable_asset": "",
+	"balance": 1200,
+	"unconfirmed_balance": 0,
+	"assets": [
+		{
+			"id": "AS6tDJJ3oWrcE1Kk3T14mD8q6ycHYVzyYQ",
+			"balance": "200000",
+			"unconfirmed_balance": "0"
+		},
+		{
+			"id": "AN51SPP6iZBHFJ3aux1jtn6MMMD13Gh3t7",
+			"balance": "500",
+			"unconfirmed_balance": "0"
+		}
+	]
+}
