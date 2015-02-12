@@ -76,4 +76,38 @@ class BlockchainApiTest extends \PHPUnit_Framework_TestCase {
 		$this->assertEquals($actual, $expected);
 	}
 
+	/**
+	 * @test
+	 * @covers \Codestillery\Coinprism\Kits\BlockchainApi::getAssetDefinition()
+	 */
+	public function getAssetDefinition_ok() {
+		$json = file_get_contents(__DIR__ . "/mocks/BlockchainApi_getAssetDefinition_ok.json");
+		$expected = json_decode($json, true);
+		$id = "AS6tDJJ3oWrcE1Kk3T14mD8q6ycHYVzyYQ";
+
+		$httpResponse = \Mockery::mock("\\Codestillery\\Coinprism\\Http\\Response", ["getContent" => $json]);
+		$httpClient = \Mockery::mock("\\Codestillery\\Coinprism\\Http\\Client", ["get" => $httpResponse]);
+
+		$blockchainApi = new BlockchainApi($httpClient);
+		$actual = $blockchainApi->getAssetDefinition($id);
+		$this->assertEquals($actual, $expected);
+	}
+
+	/**
+	 * @test
+	 * @covers \Codestillery\Coinprism\Kits\BlockchainApi::getGetAddressesHolding()
+	 */
+	public function getGetAddressesHolding_ok() {
+		$json = file_get_contents(__DIR__ . "/mocks/BlockchainApi_getGetAddressesHolding_ok.json");
+		$expected = json_decode($json, true);
+		$id = "AS6tDJJ3oWrcE1Kk3T14mD8q6ycHYVzyYQ";
+
+		$httpResponse = \Mockery::mock("\\Codestillery\\Coinprism\\Http\\Response", ["getContent" => $json]);
+		$httpClient = \Mockery::mock("\\Codestillery\\Coinprism\\Http\\Client", ["get" => $httpResponse]);
+
+		$blockchainApi = new BlockchainApi($httpClient);
+		$actual = $blockchainApi->getAddressesHolding($id);
+		$this->assertEquals($actual, $expected);
+	}
+
 }

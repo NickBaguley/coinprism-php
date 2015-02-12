@@ -52,4 +52,29 @@ class BlockchainApi extends Kit {
 		return json_decode($httpResponse->getContent(), true);
 	}
 
+	/**
+	 * Retrieve asset definition
+	 *
+	 * @param string $id of an asset
+	 * @return array
+	 */
+	public function getAssetDefinition($id) {
+		$path = "/v1/assets/" . urlencode($id);
+		$httpResponse = $this->httpClient->get($path, [], [], true);
+		return json_decode($httpResponse->getContent(), true);
+	}
+
+	/**
+	 * Retrieve addresses holding an asset
+	 *
+	 * @param string $id of an asset
+	 * @param int $height
+	 * @return array
+	 */
+	public function getGetAddressesHolding($id) {
+		$path = "/v1/assets/" . urlencode($id) . "/owners";
+		$httpResponse = $this->httpClient->get($path, [], [], true);
+		return json_decode($httpResponse->getContent(), true);
+	}
+
 }

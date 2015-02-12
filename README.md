@@ -29,8 +29,6 @@ var_dump($out);
 
 ## To do
 
-* Blockchain query API - get an asset definition
-* Blockchain query API - get all the addresses holding an asset
 * Blockchain query API - query asset information for transactions that are not in the Blockchain yet
 * Transaction builder - issue colored coins
 * Transaction builder - send an asset

@@ -11,5 +11,5 @@ use Codestillery\Coinprism\Toolkit;
 
 $toolkit = Toolkit::getInstance("https://api.coinprism.com");
 $kit = $toolkit->getBlockchainApi();
-$out = $kit->getBalance("akMRazz7MXYvu47ScNMTq9jT6QwubyDSscY");
+$out = $kit->getRecentTransactions("1BThkpJ2453DBsHFKjMeVsYX5LjRvAKbmR");
 var_dump($out);

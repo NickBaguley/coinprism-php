@@ -1,0 +1,26 @@
+{
+	"block_height": 321547,
+	"asset_id": "AS6tDJJ3oWrcE1Kk3T14mD8q6ycHYVzyYQ",
+	"owners": [
+		{
+			"script": "76a91483d521f559808be29bcc14dbb9b8763e8bd0230f88ac",
+			"address": "1D24qr4gDZ1h5D5hLXF3AbddFWiA4Vnm3d",
+			"asset_quantity": "800005"
+		},
+		{
+			"script": "76a91473758c13a91699376abb8fe76931bdd9bdc04ee388ac",
+			"address": "1BXVXP82f7x9YWdWuCaCYwad8ZoYayyRYt",
+			"asset_quantity": "200000"
+		},
+		{
+			"script": "76a914acf71da539b2a5806e5df2a5ae6ef31e076a0aed88ac",
+			"address": "1GmZFuJdDnvSE4vwCuRg9JJ65bkwNthfvV",
+			"asset_quantity": "10"
+		},
+		{
+			"script": "76a914a66ded1272e284f8801afed26e283c4ceff64ac388ac",
+			"address": "1GAzre9whckCtZf1wF8mWEpUWwQP9eNEMy",
+			"asset_quantity": "5"
+		}
+	]
+}

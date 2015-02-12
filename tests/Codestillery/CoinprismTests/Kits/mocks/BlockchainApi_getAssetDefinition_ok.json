@@ -1,0 +1,15 @@
+{
+	"asset_id": "AS6tDJJ3oWrcE1Kk3T14mD8q6ycHYVzyYQ",
+	"metadata_url": "https://cpr.sm/bKAozZKLe1",
+	"verified_issuer": false,
+	"name": "The Bluth Company Share",
+	"contract_url": "https://bluthbananastand.com/bananax.html",
+	"name_short": "BANAX",
+	"issuer": null,
+	"description": "The share of the Bluth Banana Stand company.",
+	"description_mime": "text/x-markdown; charset=UTF-8",
+	"type": "Stock",
+	"divisibility": 2,
+	"icon_url": "https://bluthbananastand.com/icon.jpg",
+	"image_url": "https://bluthbananastand.com/image.jpg"
+}
