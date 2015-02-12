@@ -40,4 +40,16 @@ class BlockchainApi extends Kit {
 		return json_decode($httpResponse->getContent(), true);
 	}
 
+	/**
+	 * Return details about bitcoin or colored coin transaction
+	 *
+	 * @param string $txid to be investigated
+	 * @return array
+	 */
+	public function getTransactionDetails($txid) {
+		$path = "/v1/transactions/" . urlencode($txid);
+		$httpResponse = $this->httpClient->get($path, [], [], true);
+		return json_decode($httpResponse->getContent(), true);
+	}
+
 }

@@ -27,6 +27,18 @@ $out = $kit->getBalance("a12345", "json");
 var_dump($out);
 ```
 
+## To do
+
+* Blockchain query API - get an asset definition
+* Blockchain query API - get all the addresses holding an asset
+* Blockchain query API - query asset information for transactions that are not in the Blockchain yet
+* Transaction builder - issue colored coins
+* Transaction builder - send an asset
+* Transaction builder - send bitcoins to one or more address
+* Transaction builder - atomically swap Bitcoins and an asset
+* Signing and broadcasting - sign an unsigned raw transaction
+* Signing and broadcasting - push a signed raw transaction to the network
+
 ## Legal
 
 This project is licensed under terms of GNU Lesser General Public License version 3.0 or later.

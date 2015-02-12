@@ -59,4 +59,21 @@ class BlockchainApiTest extends \PHPUnit_Framework_TestCase {
 		$this->assertEquals($actual, $expected);
 	}
 
+	/**
+	 * @test
+	 * @covers \Codestillery\Coinprism\Kits\BlockchainApi::getTransactionDetails()
+	 */
+	public function getTransactionDetails_ok() {
+		$json = file_get_contents(__DIR__ . "/mocks/BlockchainApi_getTransactionDetails_ok.json");
+		$expected = json_decode($json, true);
+		$txid = "eba760a81b177051b0520418b4e10596955adb98196c15367a2467ab66a19b5c";
+
+		$httpResponse = \Mockery::mock("\\Codestillery\\Coinprism\\Http\\Response", ["getContent" => $json]);
+		$httpClient = \Mockery::mock("\\Codestillery\\Coinprism\\Http\\Client", ["get" => $httpResponse]);
+
+		$blockchainApi = new BlockchainApi($httpClient);
+		$actual = $blockchainApi->getTransactionDetails($txid);
+		$this->assertEquals($actual, $expected);
+	}
+
 }
