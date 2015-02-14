@@ -54,7 +54,7 @@ class Client {
 		curl_setopt($curl, CURLOPT_HEADER, FALSE);
 		curl_setopt($curl, CURLOPT_HTTPHEADER, ["Content-Type: application/json"]);
 		if ("get" !== $method) {
-			curl_setopt($curl, CURLOPT_POSTFIELDS, $params);
+			curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($params));
 		}
 
 		$content = curl_exec($curl);

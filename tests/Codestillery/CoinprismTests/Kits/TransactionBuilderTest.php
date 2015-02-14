@@ -31,4 +31,27 @@ class TransactionBuilderTest extends \PHPUnit_Framework_TestCase {
 		$this->assertEquals($expected, $actual);
 	}
 
+	/**
+	 * @test
+	 * @covers \Codestillery\Coinprism\Kits\TransactionBuilder::send
+	 */
+	public function send_ok() {
+		$json = file_get_contents(__DIR__ . "/mocks/TransactionBuilder_send_ok.json");
+		$expected = json_decode($json, true);
+		$content = json_encode($expected);
+
+		$response = \Mockery::mock("\\Codestillery\\Coinprism\\Http\\Response", ["getContent" => $content]);
+		$client = \Mockery::mock("\\Codestillery\\Coinprism\\Http\\Client", ["post" => $response]);
+
+		$fee = 1000;
+		$from = "1zLkEoZF7Zdoso57h9si5fKxrKopnGSDn";
+		$address = "akSjSW57xhGp86K6JFXXroACfRCw7SPv637";
+		$amount = 10;
+		$asset = "AHthB6AQHaSS9VffkfMqTKTxVV43Dgst36";
+
+		$transactionBuilder = new TransactionBuilder($client);
+		$actual = $transactionBuilder->send($fee, $from, $address, $amount, $asset);
+		$this->assertEquals($expected, $actual);
+	}
+
 }

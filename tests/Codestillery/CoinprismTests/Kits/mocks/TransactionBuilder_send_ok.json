@@ -1,0 +1,60 @@
+{
+		"inputs":
+		[
+				{
+						"output_hash": "ee58df504a5d2df48359285322b7c8de6893a7f417eac6fe4d6f30302530a52e",
+						"output_index": 1,
+						"value": 600,
+						"addresses": [ "1zLkEoZF7Zdoso57h9si5fKxrKopnGSDn" ],
+						"script_signature": "76a9140ad8314907ce3b83344f5cd45dfa776eca6bf0a188ac",
+						"asset_id": "AHthB6AQHaSS9VffkfMqTKTxVV43Dgst36"
+						"asset_quantity": "15"
+				},
+				{
+						"output_hash": "2a666f31bd83168967c445c1ccf1107b511fc4eba86eb8d3386c5f5a5ae314c8",
+						"output_index": 1,
+						"value": 140757317,
+						"addresses": [ "1zLkEoZF7Zdoso57h9si5fKxrKopnGSDn" ],
+						"script_signature": "76a9140ad8314907ce3b83344f5cd45dfa776eca6bf0a188ac",
+						"asset_id": null,
+						"asset_quantity": null
+				}
+		],
+		"outputs":
+		[
+				{
+						"index": 0,
+						"value": 0,
+						"addresses": [],
+						"script": "6a084f410100020a0500",
+						"asset_id": null,
+						"asset_quantity": null
+				},
+				{
+						"index": 1,
+						"value": 600,
+						"addresses": [ "1GmZFuJdDnvSE4vwCuRg9JJ65bkwNthfvV" ],
+						"script": "76a914acf71da539b2a5806e5df2a5ae6ef31e076a0aed88ac",
+						"asset_id": "AHthB6AQHaSS9VffkfMqTKTxVV43Dgst36",
+						"asset_quantity": "10"
+				},
+				{
+						"index": 2,
+						"value": 600,
+						"addresses": [ "1zLkEoZF7Zdoso57h9si5fKxrKopnGSDn" ],
+						"script": "76a9140ad8314907ce3b83344f5cd45dfa776eca6bf0a188ac",
+						"asset_id": "AHthB6AQHaSS9VffkfMqTKTxVV43Dgst36",
+						"asset_quantity": "5"
+				},
+				{
+						"index": 3,
+						"value": 140755717,
+						"addresses": [ "1zLkEoZF7Zdoso57h9si5fKxrKopnGSDn" ],
+						"script": "76a9140ad8314907ce3b83344f5cd45dfa776eca6bf0a188ac",
+						"asset_id": null,
+						"asset_quantity": null
+				}
+		],
+		"amount": 140756917,
+		"fees": 1000
+}

@@ -16,25 +16,38 @@ class TransactionBuilder extends Kit {
 	 */
 	public function issue($fee, $from, $asset, $amount, $metadata) {
 		$params = [
-			"fees" => (int)$fee,
+			"fees" => $fee,
 			"from" => $from,
 			"asset" => $asset,
-			"amount" => (int)$amount,
+			"amount" => $amount,
 			"metadata" => $metadata,
 		];
 		$response = $this->client->post("/v1/issueasset", $params, [], true);
 		return json_decode($response->getContent(), true);
 	}
 
-/*
-\"fees\": 1000,
-  \"from\": \"1zLkEoZF7Zdoso57h9si5fKxrKopnGSDn\",
-  \"to\": [
-    {
-      \"address\": \"akSjSW57xhGp86K6JFXXroACfRCw7SPv637\",
-      \"amount\": \"10\",
-      \"asset_id\": \"AHthB6AQHaSS9VffkfMqTKTxVV43Dgst36\"
-    }
-  ]
-*/
+	/**
+	 * Create an unsigned transaction for sending an asset
+	 *
+	 * @param int $fee in satoshis
+	 * @param string $from bitcoin address
+	 * @param array $address of recipient
+	 * @param int $amount
+	 * @param string $asset address
+	 * @return array
+	 */
+	public function send($fee, $from, $address, $amount, $asset) {
+		$params = [
+			"fees" => $fee,
+			"from" => $from,
+			"to" => [
+				"address" => $address,
+				"amount" => $amount,
+				"asset_id" => $asset,
+			]
+		];
+		$response = $this->client->post("/v1/sendasset", $params, [], true);
+		return json_decode($response->getContent(), true);
+	}
+
 }
