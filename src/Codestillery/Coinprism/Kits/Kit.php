@@ -14,15 +14,15 @@ abstract class Kit {
 	/**
 	 * @var \Codestillery\Coinprism\Http\Client
 	 */
-	protected $httpClient;
+	protected $client;
 
 	/**
 	 * Constructor
 	 *
 	 * @param \Codestillery\Coinprism\Http\Client $client
 	 */
-	public function __construct(Client $httpClient) {
-		$this->httpClient = $httpClient;
+	public function __construct(Client $client) {
+		$this->client = $client;
 	}
 
 	/**
@@ -31,7 +31,7 @@ abstract class Kit {
 	 * @return \Codestillery\Coinprism\Http\Client $client
 	 */
 	public function getHttpClient() {
-		return $this->httpClient;
+		return $this->client;
 	}
 
 }

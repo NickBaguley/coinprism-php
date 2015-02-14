@@ -2,7 +2,7 @@
 
 namespace Codestillery\CoinprismTests\Kits;
 
-use Codestillery\Coinprism\Kits\AccountManager;
+use \Codestillery\Coinprism\Kits\AccountManager;
 
 class AccountManagerTest extends \PHPUnit_Framework_TestCase {
 
@@ -20,12 +20,12 @@ class AccountManagerTest extends \PHPUnit_Framework_TestCase {
 		];
 		$content = json_encode($expected);
 
-		$httpResponse = \Mockery::mock("\\Codestillery\\Coinprism\\Http\\Response", ["getContent" => $content]);
-		$httpClient = \Mockery::mock("\\Codestillery\\Coinprism\\Http\\Client", ["post" => $httpResponse]);
+		$response = \Mockery::mock("\\Codestillery\\Coinprism\\Http\\Response", ["getContent" => $content]);
+		$client = \Mockery::mock("\\Codestillery\\Coinprism\\Http\\Client", ["post" => $response]);
 
-		$accountManager = new AccountManager($httpClient);
+		$accountManager = new AccountManager($client);
 		$actual = $accountManager->createAddress("Label 1");
-		$this->assertEquals($actual, $expected);
+		$this->assertEquals($expected, $actual);
 	}
 
 }

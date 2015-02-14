@@ -20,8 +20,8 @@ class AccountManager extends Kit {
 	public function createAddress($label) {
 		$path = "/v1/account/createaddress";
 		$params = ["label" => $label];
-		$httpResponse = $this->httpClient->post($path, $params, [], true);
-		return json_decode($httpResponse->getContent(), true);
+		$response = $this->client->post($path, $params, [], true);
+		return json_decode($response->getContent(), true);
 	}
 
 }

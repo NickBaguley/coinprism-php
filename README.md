@@ -30,7 +30,6 @@ var_dump($out);
 ## To do
 
 * Blockchain query API - query asset information for transactions that are not in the Blockchain yet
-* Transaction builder - issue colored coins
 * Transaction builder - send an asset
 * Transaction builder - send bitcoins to one or more address
 * Transaction builder - atomically swap Bitcoins and an asset

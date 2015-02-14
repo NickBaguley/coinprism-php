@@ -12,8 +12,8 @@ class BlockchainApi extends Kit {
 	 */
 	public function getBalance($address) {
 		$path = "/v1/addresses/" . urlencode($address);
-		$httpResponse = $this->httpClient->get($path, [], [], true);
-		return json_decode($httpResponse->getContent(), true);
+		$response = $this->client->get($path, [], [], false);
+		return json_decode($response->getContent(), true);
 	}
 
 	/**
@@ -24,8 +24,8 @@ class BlockchainApi extends Kit {
 	 */
 	public function getRecentTransactions($address) {
 		$path = "/v1/addresses/" . urlencode($address) . "/transactions";
-		$httpResponse = $this->httpClient->get($path, [], [], true);
-		return json_decode($httpResponse->getContent(), true);
+		$response = $this->client->get($path, [], [], false);
+		return json_decode($response->getContent(), true);
 	}
 
 	/**
@@ -36,8 +36,8 @@ class BlockchainApi extends Kit {
 	 */
 	public function getUnspentOutputs($address) {
 		$path = "/v1/addresses/" . urlencode($address) . "/unspents";
-		$httpResponse = $this->httpClient->get($path, [], [], true);
-		return json_decode($httpResponse->getContent(), true);
+		$response = $this->client->get($path, [], [], false);
+		return json_decode($response->getContent(), true);
 	}
 
 	/**
@@ -48,8 +48,8 @@ class BlockchainApi extends Kit {
 	 */
 	public function getTransactionDetails($txid) {
 		$path = "/v1/transactions/" . urlencode($txid);
-		$httpResponse = $this->httpClient->get($path, [], [], true);
-		return json_decode($httpResponse->getContent(), true);
+		$response = $this->client->get($path, [], [], false);
+		return json_decode($response->getContent(), true);
 	}
 
 	/**
@@ -60,8 +60,8 @@ class BlockchainApi extends Kit {
 	 */
 	public function getAssetDefinition($id) {
 		$path = "/v1/assets/" . urlencode($id);
-		$httpResponse = $this->httpClient->get($path, [], [], true);
-		return json_decode($httpResponse->getContent(), true);
+		$response = $this->client->get($path, [], [], false);
+		return json_decode($response->getContent(), true);
 	}
 
 	/**
@@ -73,8 +73,8 @@ class BlockchainApi extends Kit {
 	 */
 	public function getAddressesHolding($id) {
 		$path = "/v1/assets/" . urlencode($id) . "/owners";
-		$httpResponse = $this->httpClient->get($path, [], [], true);
-		return json_decode($httpResponse->getContent(), true);
+		$response = $this->client->get($path, [], [], false);
+		return json_decode($response->getContent(), true);
 	}
 
 }
