@@ -97,8 +97,8 @@ class BlockchainApiTest extends \PHPUnit_Framework_TestCase {
 	 * @test
 	 * @covers \Codestillery\Coinprism\Kits\BlockchainApi::getGetAddressesHolding()
 	 */
-	public function getGetAddressesHolding_ok() {
-		$json = file_get_contents(__DIR__ . "/mocks/BlockchainApi_getGetAddressesHolding_ok.json");
+	public function getAddressesHolding_ok() {
+		$json = file_get_contents(__DIR__ . "/mocks/BlockchainApi_getAddressesHolding_ok.json");
 		$expected = json_decode($json, true);
 		$id = "AS6tDJJ3oWrcE1Kk3T14mD8q6ycHYVzyYQ";
 

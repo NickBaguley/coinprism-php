@@ -71,7 +71,7 @@ class BlockchainApi extends Kit {
 	 * @param int $height
 	 * @return array
 	 */
-	public function getGetAddressesHolding($id) {
+	public function getAddressesHolding($id) {
 		$path = "/v1/assets/" . urlencode($id) . "/owners";
 		$httpResponse = $this->httpClient->get($path, [], [], true);
 		return json_decode($httpResponse->getContent(), true);
