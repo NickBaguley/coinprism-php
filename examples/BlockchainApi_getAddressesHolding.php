@@ -11,5 +11,5 @@ use Codestillery\Coinprism\Toolkit;
 
 $toolkit = Toolkit::getInstance("https://api.coinprism.com");
 $kit = $toolkit->getBlockchainApi();
-$out = $kit->getGetAddressesHolding("AcK34dsaCqKV94Ges4t4RFRsxWhrAwZoX8");
+$out = $kit->getAddressesHolding("AcK34dsaCqKV94Ges4t4RFRsxWhrAwZoX8");
 var_dump($out);
