@@ -10,7 +10,7 @@ class AccountManagerTest extends \PHPUnit_Framework_TestCase {
 
 	/**
 	 * @test
-	 * @covers \Codestillery\Coinprism\Kits\AccountManager::createAddress()
+	 * @covers \Codestillery\Coinprism\Kits\AccountManager::createAddress
 	 */
 	public function createAddress_ok() {
 		$expected = [
