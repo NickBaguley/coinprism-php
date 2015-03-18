@@ -9,7 +9,15 @@ require_once __DIR__ . "/../vendor/autoload.php";
 
 use Codestillery\Coinprism\Toolkit;
 
-$toolkit = Toolkit::getInstance("https://api.coinprism.com");
+//$api = "https://private-anon-2234885ee-coinprism.apiary-mock.com";
+$api = "https://api.coinprism.com";
+$toolkit = Toolkit::getInstance($api);
 $kit = $toolkit->getTransactionBuilder();
-$out = $kit->send(1000, "1zLkEoZF7Zdoso57h9si5fKxrKopnGSDn", "akSjSW57xhGp86K6JFXXroACfRCw7SPv637", 10, "AHthB6AQHaSS9VffkfMqTKTxVV43Dgst36");
+$out = $kit->send(
+	1000, // fee
+	"1BThkpJ2453DBsHFKjMeVsYX5LjRvAKbmR", // from bitcoin address
+	"akVigWnLqtv6hL6rByUoHbxEcuvTtaVvogt", // recipient address
+	10, // amount
+	"AH4CuJntyPGtM37H3cHj6WBERYQLaKU5kF" // asset id
+);
 var_dump($out);

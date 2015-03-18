@@ -17,6 +17,8 @@ class Client {
 	 */
 	protected $response;
 
+	protected $options = [];
+
 	/**
 	 * Constructor
 	 *
@@ -24,6 +26,11 @@ class Client {
 	 */
 	public function __construct($baseUrl) {
 		$this->baseUrl = $baseUrl;
+	}
+
+	public function setCurlOptions(array $options) {
+		$this->options = $options;
+		return $this;
 	}
 
 	/**
@@ -41,11 +48,11 @@ class Client {
 	 * @param string $method
 	 * @param string $path relative to $this->baseUrl
 	 * @param string<string>[] parameters for Http POST
-	 * @param array $opts for curl
+	 * @param array $options for curl
 	 * @param boolean $auth
 	 * @return \Codestillery\Coinprism\Http\Response|null
 	 */
-	protected function call($method, $path, array $params = [], array $opts = [], $auth = false) {
+	protected function call($method, $path, array $params = [], array $options = [], $auth = false) {
 		$url = $this->baseUrl . $path;
 
 		$curl = curl_init();
@@ -53,6 +60,8 @@ class Client {
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
 		curl_setopt($curl, CURLOPT_HEADER, FALSE);
 		curl_setopt($curl, CURLOPT_HTTPHEADER, ["Content-Type: application/json"]);
+		empty($this->options) or curl_setopt_array($curl, $this->options);
+		empty($options) or curl_setopt_array($curl, $options);
 		if ("get" !== $method) {
 			curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($params));
 		}
@@ -62,12 +71,12 @@ class Client {
 		return $this->response;
 	}
 
-	public function get($path, array $params = [], array $opts = [], $auth = false) {
-		return $this->call("get", $path, $params, $opts, $auth);
+	public function get($path, array $params = [], array $options = [], $auth = false) {
+		return $this->call("get", $path, $params, $options, $auth);
 	}
 
-	public function post($path, array $params = [], array $opts = [], $auth = false) {
-		return $this->call("post", $path, $params, $opts, $auth);
+	public function post($path, array $params = [], array $options = [], $auth = false) {
+		return $this->call("post", $path, $params, $options, $auth);
 	}
 
 }

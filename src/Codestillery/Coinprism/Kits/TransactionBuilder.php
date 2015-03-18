@@ -16,10 +16,10 @@ class TransactionBuilder extends Kit {
 	 */
 	public function issue($fee, $from, $asset, $amount, $metadata) {
 		$params = [
-			"fees" => $fee,
+			"fees" => (int)$fee,
 			"from" => $from,
 			"asset" => $asset,
-			"amount" => $amount,
+			"amount" => (int)$amount,
 			"metadata" => $metadata,
 		];
 		$response = $this->client->post("/v1/issueasset", $params, [], true);
@@ -38,12 +38,14 @@ class TransactionBuilder extends Kit {
 	 */
 	public function send($fee, $from, $address, $amount, $asset) {
 		$params = [
-			"fees" => $fee,
+			"fees" => (int)$fee,
 			"from" => $from,
 			"to" => [
-				"address" => $address,
-				"amount" => $amount,
-				"asset_id" => $asset,
+				[
+					"address" => $address,
+					"amount" => (int)$amount,
+					"asset_id" => $asset,
+				],
 			]
 		];
 		$response = $this->client->post("/v1/sendasset", $params, [], true);
